@@ -1,0 +1,38 @@
+.arrow-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 3;
+  transform: rotate(45deg);
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-grey-light;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  &:before {
+    width: 40%;
+    height: 2px;
+  }
+
+  &:after {
+    width: 2px;
+    height: 40%;
+  }
+
+  &:hover {
+    &:before, &:after {
+      background-color: $color-grey-dark;
+    }
+  }
+}

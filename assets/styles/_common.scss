@@ -1,0 +1,290 @@
+// Blocks
+section {
+  padding-top: 100px;
+
+  @media (max-width: 767px) {
+    padding-top: 22px;
+  }
+}
+
+// Typography
+*,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: 'Ek Mukta', sans-serif;
+  color: $color-text-dark;
+}
+
+.serif {
+  font-family: "Playfair Display", serif !important;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: "Playfair Display", serif !important;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: bold;
+  margin: 0;
+
+ small {
+    font-size: 60%;
+    font-weight: 100;
+ }
+
+  @media (max-width: 767px) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 48px;
+
+  &.big {
+    font-size: 48px;
+    line-height: 64px;
+    padding-bottom: 22px;
+  }
+
+  small {
+     font-size: 60%;
+     font-weight: 100;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+    line-height: 42px;
+    &.big {
+      font-size: 32px;
+      line-height: 48px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+h3 {
+  font-size: 30px;
+  padding: 15px 0;
+  line-height: 40px;
+
+  small {
+     font-size: 60%;
+     font-weight: 100;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height:32px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 1.5em;
+
+  small {
+     font-size: 60%;
+     font-weight: 100;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 1.5em;
+
+  small {
+     font-size: 60%;
+     font-weight: 100;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  padding-bottom: 30px;
+  letter-spacing: 0.02em;
+
+  strong {
+    font-weight: bold;
+  }
+
+  &.p-serif {
+    font-family: 'Playfair Display', serif;
+  }
+
+  &.p-big {
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 300;
+  }
+
+  &.p-small {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.p-big {
+  p {
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 300;
+  }
+}
+
+.above-title {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $color-main;
+  padding-bottom: 20px;
+}
+
+// Images
+figure {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Quantity Input
+.quantity-input {
+  display: inline-block;
+  vertical-align: middle;
+  padding:6px 32px;
+  border-radius: 20px;
+  border: 1px solid $color-grey-border;
+  color: $color-secondary;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  max-width: 160px;
+
+  .quantity-number {
+    @extend p;
+    font-size: 20px;
+    color: $color-grey-dark;
+  }
+
+  .quantity-minus, .quantity-plus{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .quantity-plus {
+    margin-left: 20px;
+    background-image: url("~assets/images/icons/icon-plus.svg");
+  }
+
+  .quantity-minus {
+    margin-right: 20px;
+    background-image: url("~assets/images/icons/icon-minus.svg");
+  }
+}
+
+// Titles
+h1, h2, h3, h4, h5, h6 {
+  .caption {
+    display: block;
+  }
+}
+
+.caption {
+    font-family: 'Playfair Display', sans-serif;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #8B8B8B;
+    padding-bottom: 10px;
+    font-style: italic;
+
+  &.small {
+    font-size: 12px;
+  }
+
+  .no-padding {
+    padding-bottom: 0;
+  }
+
+  &.green{
+    color: $color-main;
+  }
+  
+  &.grey{
+    color: $color-grey-light;
+  }
+
+  &.black{
+    color: $color-grey-dark;
+  }
+
+  &.sans-serif {
+    font-family: "Ek Mukta", sans-serif;
+    text-transform: capitalize;
+    font-style: normal;
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+}
+
+.section-title {
+  text-align: center;
+
+  .section-title_inner {
+    display: inline-block;
+
+    .under-title {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding-top: 10px;
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      height: 1px;
+      width: 100px;
+      background-color: rgba(0,0,0,0.2);
+    }
+
+    &:before {
+      left: -160px;
+    }
+
+    &:after {
+      right: -160px;
+    }
+
+    @media (max-width: 767px) {
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}

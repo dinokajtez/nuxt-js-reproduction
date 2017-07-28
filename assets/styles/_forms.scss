@@ -1,0 +1,63 @@
+form {
+  &.comments-form {
+    border: 1px solid $color-grey-lighter;
+    padding: 22px;
+
+    input, textarea {
+      border: none;
+    }
+
+    .rating {
+      display: inline-block;
+      height: 12px;
+      width: auto;
+      padding: 15px 5px 30px;
+    }
+  }
+}
+
+.input-group {
+  padding-top: 10px;
+
+  input, textarea {
+    font-family: 'Ek Mukta', sans-serif;
+    font-size: 16px;
+    z-index: 4;
+  }
+
+  label {
+    font-family: 'Ek Mukta', sans-serif;
+    position: absolute;
+    top: 10px;
+    transition: all 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    font-size: 16px;
+    z-index: 3;
+
+    &.not-abs {
+      position: relative;
+      top: 0;
+    }
+  }
+
+  input:focus ~ label, input:valid ~ label, input:disabled ~ label, textarea:focus ~ label, textarea:not(:invalid) ~ label{
+    top: -10px;
+    font-size: 12px;
+    color: $color-main;
+  }
+
+  .help {
+    font-size: 12px;
+    top: -20px;
+  }
+
+  .is-danger {
+    color: $color-red;
+  }
+
+  span {
+    font-size: 14px;
+    top: -12px;
+    font-weight: 300;
+    color: $color-grey;
+  }
+}

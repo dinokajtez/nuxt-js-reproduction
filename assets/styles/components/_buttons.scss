@@ -1,0 +1,65 @@
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 20px;
+  border: 1px solid $color-secondary;
+  color: $color-main-dark;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &-green {
+    color: $color-main-dark;
+    border: 1px solid $color-main-dark;
+    background-color: transparent;
+
+    span {
+      color: $color-main-dark;
+    }
+
+    &:hover {
+      background-color: $color-main-dark;
+      color: $color-white;
+
+      span {
+        color: $color-white;
+      }
+    }
+
+    &.btn-disabled {
+      border: 1px solid $color-grey-light;
+      color: $color-grey-light;
+
+      span {
+        color: $color-grey-light;
+      }
+    }
+  }
+
+
+  &-grey {
+    color: $color-white;
+    border: none;
+    background-color: $color-grey-dark;
+
+    span {
+      color: $color-white;
+    }
+
+    &:hover {
+      background-color: $color-main;
+      color: $color-white;
+    }
+  }
+
+
+  &-spinner {
+    padding-bottom: 9px;
+  }
+
+  &-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

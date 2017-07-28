@@ -1,0 +1,217 @@
+.zIndex{
+  z-index: 6;
+}
+
+.herbarijum {
+
+  .herbarijum-item_group {
+    .herbarijum-item {
+      display: flex;
+      display: -webkit-flex;
+      height: 500px;
+      margin-bottom: 100px;
+
+      .herbarijum-item_text {
+        width: 30%;
+        height: 100%;
+        text-align: center;
+        padding: 0 20px;
+
+        @media (max-width: 959px) {
+          width: 100%;
+          height: auto;
+          padding: 20px 10px;
+          background-color: #f4f4f4;
+        }
+      }
+
+      .herbarijum-item_image {
+        width: 70%;
+        height: 100%;
+        overflow: hidden;
+
+        @media (max-width: 959px) {
+          width: 100%;
+          height: auto;
+          max-height: 300px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+
+          @media (max-width: 959px) {
+            height: 100%;
+          }
+        }
+      }
+
+      @media (max-width: 959px) {
+        flex-direction: column-reverse !important;
+        width: 50%;
+        height: auto;
+      }
+
+      @media (max-width: 640px) {
+        width: 70%;
+      }
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+    }
+
+    .herbarijum-letter {
+      font-size: 200px;
+      position: absolute;
+      left: calc(30% - 50px);
+      top: -116px;
+      font-family: "Playfair Display", Serif;
+      text-transform: capitalize;
+      font-style: italic;
+      z-index: 4;
+
+      @media (max-width: 959px) {
+        font-size: 32px;
+        left: 10px;
+        top: -20px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: $color-white;
+        text-shadow: none;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: 1px;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: $color-main;
+          z-index: -1;
+        }
+      }
+    }
+
+    @media (max-width: 959px) {
+      border-top: 1px solid $color-grey-lighter;
+      display: flex;
+      display: -webkit-flex;
+      justify-content: center;
+    }
+
+    &:nth-child(even) {
+      .herbarijum-item {
+        flex-direction: row-reverse;
+      }
+
+      .herbarijum-letter {
+        left: calc(70% - 50px);
+        z-index: 4;
+
+        @media (max-width: 959px) {
+          font-size: 32px;
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.herbarijum-info {
+  position: fixed;
+  display: flex;
+  display: -webkit-flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+
+  @media (max-width: 959px) {
+   flex-direction: column;
+  }
+
+  .herbarijum-info_right, .herbarijum-info_left {
+    width: 50%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -webkit-transition: transform 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+    @media (max-width: 959px) {
+      width: 100%;
+    }
+  }
+
+  .herbarijum-info_right {
+    padding: 22px;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: $color-white;
+    transform: translateX(100%);
+
+    .delete-btn {
+      left: 50%;
+      margin-left: -12px;
+    }
+
+    h1 {
+      text-align: center;
+      width: 90%;
+      left: 5%;
+    }
+
+    span {
+      margin-top: 22px;
+      display: block;
+      text-align: center;
+    }
+
+    p {
+      width: 90%;
+      left: 5%;
+      padding-bottom: 15px;
+
+      &:first-child {
+        margin-top: 22px;
+      }
+    }
+  }
+
+  .herbarijum-info_left {
+    transform: translateX(-100%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 959px) {
+      display: none;
+    }
+  }
+
+  &.closing {
+    .herbarijum-info_right {
+      transform: translateX(100%) !important;
+    }
+
+    .herbarijum-info_left {
+      transform: translateX(-100%) !important;
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+
+    .herbarijum-info_right {
+      transform: translateX(0);
+    }
+
+    .herbarijum-info_left {
+      transform: translateX(0);
+    }
+  }
+}

@@ -1,0 +1,178 @@
+body {
+  background-color: $color-white;
+  padding-top: $nav-height;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: $nav-height-small;
+  }
+}
+
+main {
+  width: 100%;
+  height: 100%;
+
+  &.contactOpen {
+    margin-top: 482px;
+  }
+
+  &.noScroll {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition: all 0.2s cubic-bezier(0.32, 0.8, 0.77, 0.93);
+  }
+
+  &.main-overlay{
+    width: 100%;
+    height: 100%;
+
+    &:after {
+      visibility: visible;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 767px) {
+      &:after {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+
+  //transition: opacity .2s linear;
+  //-webkit-transition: opacity .2s linear;
+
+  transition: all 0.6s cubic-bezier(0.8, 0.85, 0.19, 0.89);
+  -webkit-transition: all 0.6s cubic-bezier(0.8, 0.85, 0.19, 0.89);
+
+  &.transition {
+    opacity: 0;
+  }
+}
+
+#transition-element {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(0deg, rgba(lighten($color-main, 70), 0.2), lighten($color-main, 40) 15%, lighten($color-main, 40) 75%,rgba(lighten($color-main, 70), 0.2) 92%);
+  background-image: -webkit-linear-gradient(0deg, rgba(lighten($color-main, 70), 0.2), lighten($color-main, 40) 15%, lighten($color-main, 40) 75%,rgba(lighten($color-main, 70), 0.2) 92%);
+  z-index: 100;
+
+  &.animate {
+    visibility: visible;
+    -webkit-animation: trans .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -moz-animation: trans .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: trans .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  &.endAnimate {
+    visibility: visible;
+    -webkit-animation: endTrans .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -moz-animation: endTrans .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation: endTrans .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  }
+
+  @-webkit-keyframes trans {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0)
+    }
+  }
+  @keyframes trans {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0)
+    }
+  }
+
+  @-webkit-keyframes endTrans {
+    0% {
+      opacity: 1;
+      transform: translateX(0)
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes endTrans {
+    0% {
+      opacity: 1;
+      transform: translateX(0)
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 20px;
+
+  &_full {
+    padding: 0;
+  }
+
+  &-inner {
+    padding: 0 20px;
+  }
+}
+
+// OVERLAY
+.overlay {
+  &:after {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 1;
+
+  }
+}
+
+
+// SPINERS
+.v-spinner {
+  display: inline-block;
+  vertical-align: middle;
+}

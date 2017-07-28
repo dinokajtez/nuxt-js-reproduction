@@ -1,0 +1,200 @@
+.hero {
+  width: 100%;
+  height: 742px;
+  padding-top: 0;
+  &_main {
+    background-color: $color-pink;
+    background-image: url(~assets/images/detail.png);
+    background-size: auto;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    .container {
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      text-align: start;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+
+    &_main {
+      background-size: 54vw;
+
+      .container {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.product-slider {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 40px;
+
+  .slider-wrapper {
+    max-width: 100%;
+    width: 1500px;
+    max-height: 450px;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: initial;
+  }
+
+  .slide-image {
+    padding-bottom: 35%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  figure {
+    padding-bottom: 60%;
+    overflow: hidden;
+  }
+
+  .slick-list {
+    overflow: visible;
+    @media (max-width: 1024px) {
+      padding: 0 !important;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .slide-image {
+      width: 100%;
+      padding-bottom: 65%;
+    }
+  }
+
+  .slide-inner {
+    @media (max-width: 1024px) {
+      padding-bottom: 40px;
+      width: 640px;
+      max-width: 90%;
+      margin: auto;
+    }
+  }
+
+  .slide-content {
+    align-content: center;
+    align-items: center;
+
+    .slide-product-image {
+      position: absolute;
+      bottom: -7%;
+      -webkit-transform: translateX(-60%);
+      transform: translateX(-60%);
+      left: 0;
+      height: 70%;
+      width: auto;
+    }
+
+    .slide-text {
+      opacity: 0;
+      padding-left:  30%;
+      padding-right: 10%;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      text-align: center;
+
+      .slide-product-image {
+        display: none;
+      }
+
+      .slide-text {
+        padding-top: 30px;
+        padding-left:  0;
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      .slide-text {
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .slick-slide {
+    opacity: 0.7;
+    &:focus {
+      outline: none;
+    }
+
+    &.slide-animate {
+      .slide-content {
+        @extend .slide-left;
+        .slide-text {
+          @extend .fade-in;
+        }
+      }
+    }
+
+    &.slick-current {
+      opacity: 1;
+      .slide-content {
+        @extend .slide-left;
+      }
+
+      .slide-text {
+        @extend .fade-in;
+      }
+    }
+  }
+}
+
+.featured {
+  height: 800px;
+  padding-top: 60px;
+
+  .featured_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: auto;
+    right: 50%;
+    // background-image: url("images/Basilico-genovese-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .featured_text {
+    .featured_text-inner {
+      padding: 0 20px 0 10%;
+
+      p {
+        color: #959698;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    height: auto;
+
+    .featured_image {
+      height: 40vh;
+      position: relative;
+      right: 0;
+    }
+
+    .featured_text {
+      padding: 20px;
+      .featured_text-inner {
+        padding: 0;
+      }
+    }
+  }
+}

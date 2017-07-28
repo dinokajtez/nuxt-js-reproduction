@@ -1,0 +1,38 @@
+.social-sharing-wrap {
+  padding: 22px 0;
+  margin-top: 22px;
+  border-top: 1px solid $color-grey-lighter;
+}
+
+.s-icon {
+  display: inline-block;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #9b9b9b;
+  border-radius: 50%;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px auto;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    border-color: $color-main;
+
+  }
+
+  &.s-facebook {
+    background-image: url('~assets/images/icons/facebook.svg');
+    background-size: auto 15px;
+  }
+
+  &.s-google-plus {
+    background-image: url('~assets/images/icons/g+.svg');
+  }
+
+  &.s-twitter {
+    background-image: url('~assets/images/icons/twitter.svg');
+  }
+}

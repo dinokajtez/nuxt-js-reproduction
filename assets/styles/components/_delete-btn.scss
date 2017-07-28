@@ -1,0 +1,59 @@
+.delete-btn {
+  display: block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 3;
+  border: 1px solid $color-grey-light;
+  border-radius: 50%;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 0.5px);
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: $color-grey-light;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    border-color: $color-grey-dark;
+    &:before, &:after {
+      background-color: $color-grey-dark;
+    }
+  }
+
+  &.animated-horizontal {
+    &:hover {
+      &:before, &:after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &.animated-vertical {
+    &:hover {
+      &:before {
+        transform: rotate(-90deg);
+      }
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

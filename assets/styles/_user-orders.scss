@@ -1,0 +1,21 @@
+.order-item {
+  padding: 22px;
+  padding-bottom: 0;
+  margin-bottom: 75px;
+  border: 1px solid $color-grey-lighter;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .order-item-header {
+    padding-bottom: 17px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $color-grey-lighter;
+
+    span {
+      display: block;
+      padding-bottom: 5px;
+    }
+  }
+}

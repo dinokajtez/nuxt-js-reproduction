@@ -1,0 +1,19 @@
+.tags {
+  font-size: 0;
+
+  .tag-item {
+    display: inline-block;
+    padding: 7px 15px;
+    margin: 3px;
+    cursor: pointer;
+    text-transform: capitalize;
+    vertical-align: text-top;
+    background-color: #EEEEEE;
+    @extend p;
+
+    &:hover {
+      background-color: $color-main;
+      color: $color-white;
+    }
+  }
+}

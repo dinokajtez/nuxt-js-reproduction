@@ -1,0 +1,128 @@
+.profile {
+  width: 100%;
+  padding: 100px 0;
+
+  @media (max-width: 767px) {
+    height: auto;
+  }
+
+  .profile-options {
+    width: 200px;
+    height: 100%;
+    padding: 20px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    ul {
+      li {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-grey;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          letter-spacing: 0.01em;
+
+          &.nuxt-link-active {
+            color: $color-main;
+          }
+
+          &:hover {
+            color: $color-main;
+          }
+
+        }
+
+        &:last-child {
+          padding-top: 15px;
+          margin-top: 30px;
+          border-top: 1px solid $color-grey-light;
+        }
+
+        &:hover {
+          color: $color-red;
+        }
+
+        &.account-link{
+          i {
+            background-image: url('~assets/images/icons/icon-user.svg');
+          }
+        }
+
+        &.purchase-history-link{
+          i {
+            background-image: url('~assets/images/icons/icon-cart-history.svg');
+          }
+        }
+
+        &.logout-link{
+          i {
+            background-image: url('~assets/images/icons/icon-user-logout.svg');
+          }
+        }
+
+        i {
+          display: inline-block;
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+          vertical-align: text-top;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        @media (max-width: 767px) {
+          i {
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      @media (max-width: 767px) {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-grey-lighter;
+
+        li {
+          &:last-child {
+            padding-top: 0;
+            margin-top: 0;
+            border-top: none;
+          }
+        }
+      }
+    }
+  }
+
+  .profile-views {
+    width: calc(100% - 300px);
+    height: 100%;
+    padding:  0 20px 20px;
+    margin-left: 100px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    h3 {
+      padding: 0;
+    }
+
+    .content {
+      padding-top: 50px;
+
+      .content-inner {
+      }
+    }
+  }
+}

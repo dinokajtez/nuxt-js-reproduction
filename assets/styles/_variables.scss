@@ -1,0 +1,29 @@
+// COLORS
+$color-main: #a0b046;
+$color-main-dark: #a0b046;
+$color-secondary: #383838;
+$color-white: #FFFFFF;
+$color-black: #0d0d0d;
+$color-text-dark: #3D3D3D;
+$color-pink: #FEDADA;
+$color-grey-light: #a7a7a7;
+$color-grey-lighter: #F4F4F4;
+$color-grey: #8B8B8B;
+$color-grey-dark: #383838;
+$color-grey-border: #979797;
+$color-red: #CC3F47;
+
+// WIDTHS
+$shopping-cart-width: 430px;
+
+// HEIGHTS
+$nav-height: 80px;
+$nav-height-small: 50px;
+
+// MEDIA QUERIS SIZES
+$xs: 'max-width: 767px';
+$xsSm: 'max-width: 991px';
+$sm: 'min-width: 768px and (max-width: 991px';
+$md: 'min-width: 992px and (max-width: 1199px';
+$mdLg: 'min-width: 992px';
+$lg: 'min-width: 1200px';

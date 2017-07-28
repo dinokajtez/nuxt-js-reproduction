@@ -1,0 +1,33 @@
+.rating {
+  display: inline-block;
+  height: 12px;
+  width: auto;
+  padding-bottom: 30px;
+
+  &.hidden {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .rating-star {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    background-image: url('~assets/images/icons/star.svg');
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+
+    &.rating-star-checked {
+      background-image: url('~assets/images/icons/star-checked.svg');
+    }
+  }
+
+  .rating-text {
+    display: inline-block;
+    font-size: 14px;
+    color: $color-grey;
+    vertical-align: middle;
+    padding-left: 15px;
+  }
+}

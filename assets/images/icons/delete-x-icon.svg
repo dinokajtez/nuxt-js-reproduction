@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>X icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Product-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Products" transform="translate(-388.000000, -446.000000)">
+            <g id="Izabrani-filteri" transform="translate(-3.000000, 411.000000)">
+                <g id="Group-5-Copy" transform="translate(273.000000, 24.000000)">
+                    <g id="X-icon" transform="translate(118.000000, 11.000000)">
+                        <circle id="Oval-2" fill="#929292" cx="7" cy="7" r="7"></circle>
+                        <path d="M6.91698423,6.46711409 L4.65743023,4.20756009 L4.43249516,3.98262502 L3.98262502,4.43249516 L4.20756009,4.65743023 L6.46711409,6.91698423 L4.20756009,9.17653823 L3.98262502,9.40147331 L4.43249516,9.85134345 L4.65743023,9.62640838 L6.91698423,7.36685438 L9.17653823,9.62640838 L9.40147331,9.85134345 L9.85134345,9.40147331 L9.62640838,9.17653823 L7.36685438,6.91698423 L9.62640838,4.65743023 L9.85134345,4.43249516 L9.40147331,3.98262502 L9.17653823,4.20756009 L6.91698423,6.46711409 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
